@@ -9,7 +9,7 @@ path = r'\AppData\Local\Cisco\Unified Communications\Jabber\CSF\History'
 
 os.chdir(profile + path)
 
-os.chdir(r'C:\Users\u8008701\Desktop\test')
+# os.chdir(r'C:\Users\u8008701\Desktop\test')
 
 time_formatting = '<span style="font-family:Segoe UI;color:#000000;font-size:10pt;font-weight:normal;font-style' \
                   ':normal;text-decoration:none;"> '
