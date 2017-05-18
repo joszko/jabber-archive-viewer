@@ -32,11 +32,12 @@ footer = '</body></html>'
 # checking if the 'full archive' file exists - it's being created when the archive_recorder tool is being run.
 if os.path.isfile('full_archive.db'):
     file = 'full_archive.db'
+    conn = sqlite3.connect(file)
 else:
     file = glob.glob("*[@]*.db")
+    conn = sqlite3.connect(file[0])
 
 # getting the contents of the database
-conn = sqlite3.connect(file)
 cur = conn.cursor()
 cur.execute("SELECT date, payload, sender FROM history_message ORDER BY date DESC")
 rows = cur.fetchall()
